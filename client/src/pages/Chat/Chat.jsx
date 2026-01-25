@@ -34,7 +34,11 @@ const Chat = () => {
 
   // Connect to Socket.io
   useEffect(() => {
-    socket.current = io("ws://localhost:8800");
+    // using localhost running render
+    // socket.current = io("ws://localhost:8800");
+
+    // using online deployed socket on render
+    socket.current = io("https://codealpha-real-time-communication-app-eshn.onrender.com");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
