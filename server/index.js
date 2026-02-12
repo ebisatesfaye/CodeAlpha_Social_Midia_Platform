@@ -31,7 +31,9 @@ app.use('/images', express.static('images'));
 
 dotenv.config();
 const PORT = process.env.PORT;
-
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
 app.use('/auth', AuthRoute);
 app.use('/user', UserRoute)
 app.use('/posts', PostRoute)
