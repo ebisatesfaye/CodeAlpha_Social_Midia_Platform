@@ -100,9 +100,9 @@ useEffect(()=> {
                   <img
                     src={
                       userData?.profilePicture
-                        ? process.env.REACT_APP_PUBLIC_FOLDER +
+                        ? import.meta.env.VITE_APP_PUBLIC_FOLDER +
                           userData.profilePicture
-                        : process.env.REACT_APP_PUBLIC_FOLDER +
+                        : import.meta.env.VITE_APP_PUBLIC_FOLDER +
                           "defaultProfile.png"
                     }
                     alt="Profile"
