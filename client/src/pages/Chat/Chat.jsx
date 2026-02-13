@@ -38,7 +38,7 @@ const Chat = () => {
     // socket.current = io("ws://localhost:8800");
 
     // using online deployed socket on render
-    socket.current = io("https://codealpha-real-time-communication-app-eshn.onrender.com");
+    socket.current = io("https://social-midia-platform-socket-server.onrender.com");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
